@@ -1,0 +1,51 @@
+function myFunction() {
+// Create a new form, then add a checkbox question, a multiple choice question,
+// a page break, then a date question and a grid of questions.
+
+var form = FormApp.create('Become ClayDesk Instructor');
+
+var ss = SpreadsheetApp.create('KS-CD');
+// Update form properties via chaining.
+form.setTitle('Become ClayDesk Instructor')
+    .setDescription('Please fill out this form and we will get back to you')
+    .setConfirmationMessage('Thanks for responding!')
+    .setAllowResponseEdits(true)
+    .setAcceptingResponses(false);
+  
+ // Update the form's response destination.
+form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
+  
+form.addTimeItem()
+    .setTitle('What time do you usually wake up in the morning?');
+form.addVideoItem()
+    .setTitle('Machine Learning With Jupyter Notebooks In Amazon AWS')
+    .setHelpText('Please watch this video. This will give you an idea of what we look for in an instructor')
+    .setVideoUrl('https://youtu.be/j0vWaV7Jgrs')
+    .setWidth(400)
+    .setAlignment(FormApp.Alignment.LEFT);
+var item = form.addDateTimeItem();
+item.setTitle('How soon can you create this course?');
+var item = form.addDurationItem();
+item.setTitle('What is the duration of this course?');
+var item = form.addCheckboxItem();
+item.setTitle('What options are included with this course?');
+item.setChoices([
+        item.createChoice('Quiz'),
+        item.createChoice('Labs'),
+        item.createChoice('Practice Test')
+    ]);
+form.addMultipleChoiceItem()
+    .setTitle('Do you prefer Slides or Hands-on?')
+    .setChoiceValues(['Slides','Hands-on'])
+    .showOtherOption(true);
+form.addPageBreakItem()
+    .setTitle('Getting to know you');
+form.addDateItem()
+    .setTitle('When were you born?');
+form.addGridItem()
+    .setTitle('Rate your programming interests')
+    .setRows(['Java', 'Python', 'Golang'])
+    .setColumns(['Boring', 'So-so', 'Interesting']);
+Logger.log('Published URL: ' + form.getPublishedUrl());
+Logger.log('Editor URL: ' + form.getEditUrl());
+}
