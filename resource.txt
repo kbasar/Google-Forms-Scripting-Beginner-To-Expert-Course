@@ -1,0 +1,24 @@
+
+//Please use Code below to practice creating Google Forms with code.
+
+//Provide feedback if you find the content of this course valuable
+
+//@Syed Raza:This resource is for students who are enrolled in the Google Forms Scripting: Beginner To Expert Course
+
+//https://www.claydesk.com/ecampus/
+//https://www.udemy.com/user/syedraza2/
+
+Please fill out the form and a representative from ClayDesk will be in touch to discuss next steps.
+
+By checking this, I understand that becoming a ClayDesk instructor is subject to terms and conditions detailed on the website
+
+Thank you! An associate from ClayDesk will review your application
+
+#00baff
+#be9f82
+
+Custom Header sizes 600x122px or 1080 x 278px or 1920 x 480px  1800 x 480px
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdyYS87KimAUOPdlK-iifHqDfmlR3E8Ym1V7MEdPdvT1C9XrA/viewform?embedded=true" width="640" height="835" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+Google Form Access: https://forms.gle/HEXp1d9Hhhj72K7m8
